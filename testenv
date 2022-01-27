@@ -1,0 +1,4 @@
+ISSUER=https://dev-66700935.okta.com/oauth2/default
+CLIENT_ID=0oa3nxmzeze6Xss5Q5d7
+USE_INTERACTION_CODE=false
+SKIP_PREFLIGHT_CHECK=true
