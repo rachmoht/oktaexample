@@ -1,52 +1,21 @@
 [{
-  "title": "Snipcart Logo Sticker",
-  "id": "sticker_logo",
-  "description": "Show off your Snipcart support with a logo sticker!",
-  "price": "2.00"
+  "title": "Blue Retro",
+  "id": "sticker_logo_01",
+  "description": "Retro bowling shirt",
+  "price": "32.00",
+  "image": "shirt_001.jpg"
 },
 {
-  "title": "Snipcart Logo Sticker",
-  "id": "sticker_logo",
-  "description": "Show off your Snipcart support with a logo sticker!",
-  "price": "5.00"
+  "title": "Black & Yellow",
+  "id": "sticker_logo_02",
+  "description": "Retro bowling shirt",
+  "price": "55.00",
+  "image": "shirt_002.jpg"
 },
 {
-  "title": "Snipcart Logo Sticker",
-  "id": "sticker_logo",
-  "description": "Show off your Snipcart support with a logo sticker!",
-  "price": "26.00"
-},{
-  "title": "Snipcart Logo Sticker",
-  "id": "sticker_logo",
-  "description": "Show off your Snipcart support with a logo sticker!",
-  "price": "2.00"
-},
-{
-  "title": "Snipcart Logo Sticker",
-  "id": "sticker_logo",
-  "description": "Show off your Snipcart support with a logo sticker!",
-  "price": "5.00"
-},
-{
-  "title": "Snipcart Logo Sticker",
-  "id": "sticker_logo",
-  "description": "Show off your Snipcart support with a logo sticker!",
-  "price": "26.00"
-},{
-  "title": "Snipcart Logo Sticker",
-  "id": "sticker_logo",
-  "description": "Show off your Snipcart support with a logo sticker!",
-  "price": "2.00"
-},
-{
-  "title": "Snipcart Logo Sticker",
-  "id": "sticker_logo",
-  "description": "Show off your Snipcart support with a logo sticker!",
-  "price": "5.00"
-},
-{
-  "title": "Snipcart Logo Sticker",
-  "id": "sticker_logo",
-  "description": "Show off your Snipcart support with a logo sticker!",
-  "price": "26.00"
+  "title": "Red Cruiser",
+  "id": "sticker_logo_03",
+  "description": "Retro bowling shirt",
+  "price": "26.00",
+  "image": "shirt_003.jpg"
 }]

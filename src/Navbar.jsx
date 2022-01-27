@@ -45,8 +45,7 @@ const Navbar = ({ setCorsErrorModalOpen }) => {
         <Container>
           <Menu.Item header>
             <Link to="/">
-              <Image size="mini" src={`${process.env.PUBLIC_URL}/newlogo.png`} />
-            &nbsp;
+              <Image size="small" src={`${process.env.PUBLIC_URL}/newlogo.png`} />
             </Link>
           </Menu.Item>
           <Menu.Item id="store-button">

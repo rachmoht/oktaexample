@@ -47,22 +47,9 @@ const Profile = () => {
         <Header as="h1">
           <Icon name="drivers license" />
           {' '}
-          My User Profile (ID Token Claims) - 
-          {userInfo.groups}
+          Profile - {userInfo.name}
           {' '}
         </Header>
-        <p>
-          Below is the information from your ID token which was obtained during the &nbsp;
-          {' '}
-          and is now stored in local storage.
-        </p>
-        <p>
-          This route is protected with the
-          {' '}
-          <code>&lt;SecureRoute&gt;</code>
-          {' '}
-          component, which will ensure that this page cannot be accessed until you have authenticated.
-        </p>
         <Table>
           <thead>
             <tr>

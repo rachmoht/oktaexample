@@ -46,7 +46,7 @@ const Home = () => {
   return (
     <div id="home">
       <div>
-        <Header as="h1">PKCE Flow w/ Custom Login Page</Header>
+        <Header as="h1">Welcome to Holy Shirts!</Header>
 
         { authState.isAuthenticated && !userInfo
         && <div>Loading user information...</div>}
@@ -60,11 +60,7 @@ const Home = () => {
             !
           </p>
           <p>
-            Welcome to Holy Shirts!!
-            {' '}
-            <a href="/profile">My Profile</a>
-            {' '}
-            page to take a look inside the ID token.
+            Welcome to Holy Shirts! UN-official Store of the Bowling Team. Shop bowling shirts and more!
           </p>
         </div>
         )}
@@ -72,17 +68,12 @@ const Home = () => {
         {!authState.isAuthenticated
         && (
         <div>
-          <p>If you&lsquo;re viewing this page then you have successfully started this React application.</p>
           <p>
-            <span>This example shows you how to use the </span>
-            <a href="https://github.com/okta/okta-react/tree/master">Okta React Library</a>
-            <span> to add the </span>
-            <a href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">PKCE Flow</a>
-            <span> to your application.</span>
+            Welcome to Holy Shirts! UN-official Store of the Bowling Team. Shop bowling shirts and more!
           </p>
           <p>
             When you click the login button below, you will be presented the login page on the Okta Sign-In Widget hosted within the application.
-            After you authenticate, you will be logged in to this application with an ID token and access token. These tokens will be stored in local storage and can be retrieved at a later time.
+            After you authenticate, you will have access to your profile and store.
           </p>
           <Button id="login-button" primary onClick={login}>Login</Button>
         </div>

@@ -1,26 +1,19 @@
-/*
- * Copyright (c) 2018-Present, Okta, Inc. and/or its affiliates. All rights reserved.
- * The Okta software accompanied by this notice is provided pursuant to the Apache License, Version 2.0 (the "License.")
- *
- * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *
- * See the License for the specific language governing permissions and limitations under the License.
- */
-
-import React, { useState, useEffect } from 'react';
+/* eslint-disable */ 
 import { useOktaAuth } from '@okta/okta-react';
-import { Header, Icon } from 'semantic-ui-react';
+import React, { useState,useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Image, Button, Header } from 'semantic-ui-react';
+import products from './secret-products.json';
+import './App.css';
 
 const SocialShop = () => {
+  const history = useHistory();
   const { authState, oktaAuth } = useOktaAuth();
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
     if (!authState || !authState.isAuthenticated) {
-      // When user isn't authenticated, forget any user info
+
       setUserInfo(null);
     } else {
       oktaAuth.getUser().then((info) => {
@@ -31,35 +24,56 @@ const SocialShop = () => {
     }
   }, [authState, oktaAuth]); // Update if authState changes
 
-  if (!userInfo) {
+  const login = async () => {
+    history.push('/login');
+  };
+
+  if (!authState) {
     return (
-      <div>
-        <p>Fetching user profile...</p>
-      </div>
+      <div>Loading...</div>
     );
   }
-  console.log(userInfo.groups);
   return (
-    <div>
+    <div id="store">
       <div>
-        <Header as="h1">
-          <Icon name="drivers license" />
-          {' '}
-          My User Profile (ID Token Claims) - 
-          {userInfo.groups}
-          {' '}
-        </Header>
-        {(userInfo.groups.includes('SocialMedia'))
-        && <div>This is the SocialMedia shop.</div>}
+        <Header as="h1">Shhh...</Header>
+        { authState.isAuthenticated && !userInfo
+        && <div>Loading user information...</div>}
 
-        {!(userInfo.groups.includes('SocialMedia')) && (
-          <p>
-            This is not SocialMedia shop.
+        {authState.isAuthenticated && userInfo
+        && (
+        <div>
+          <p className="welcome">
+            Welcome, &nbsp;
+            {userInfo.name}, to the <b>super secret bowling social influencer shop</b>!
           </p>
+        </div>
         )}
+
+        {!authState.isAuthenticated
+        && (
+        <div>
+          <p>If you already have an account use the button below to login</p>
+          <Button id="login-button" primary onClick={login}>Login</Button>
+        </div>
+        )}
+      </div>
+      <div className="container store-container">
+        {products.map((product) => {
+          return (
+            <div key={product.id} >
+              <h3>{ product.title }</h3>
+              <Image size="small" src={`${process.env.PUBLIC_URL}/shirts/${ product.image }`} />
+              <p>{ product.description }</p>
+              <p>${ product.price }</p>
+              <p>
+              <button>Add to Cart</button>
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
-
 export default SocialShop;
