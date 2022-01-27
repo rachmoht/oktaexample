@@ -15,20 +15,10 @@ Before running this sample, you will need the following:
 
 To run this application, you first need to clone this repo:
 
-```bash
-git clone https://github.com/okta/samples-js-react.git
-```
-
 Then install dependencies:
 
 ```bash
 npm install
-```
-
-Enter into custom-login directory:
-
-```bash
-cd samples-js-react/custom-login
 ```
 
 Now you need to gather the following information from the Okta Developer Console:
